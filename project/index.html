@@ -5,6 +5,7 @@
     <title>The Harmon Room | 21c Museum Hotel</title>
     <link rel="stylesheet" href="./css/shared.css" />
     <link rel="stylesheet" href="./css/animations.css" />
+    <script src="./js/main.js" async></script>
 </head>
 <body>
 
@@ -39,8 +40,8 @@
 
                 <!-- PHOTO CONTAINER 1 -->
                 <div class="photo-container">
-                    <div class="photo">
-                        <img src="./images/thumb/thumbnail_1.jpg" alt="image" />
+                    <div class="photo" onclick="openModal();currentSlide(1)">
+                        <img src="./images/thumb/thumbnail_1.jpg" alt="image"/>
                         <div class="photo-overlay">
                             <h3 class="white-head">Click to Enlarge</h3>
                             <p>Choose your next move carefully! Plan a stay with us today!</p>
@@ -50,7 +51,7 @@
                 <!-- END PHOTO CONTAINER 1 -->
                 <!-- PHOTO CONTAINER 2 -->
                 <div class="photo-container">
-                    <div class="photo">
+                    <div class="photo" onclick="openModal();currentSlide(2)">
                         <img src="./images/thumb/thumbnail_2.jpg" alt="image" />
                         <div class="photo-overlay">
                             <h3 class="white-head">Click to Enlarge</h3>
@@ -61,7 +62,7 @@
                 <!-- END PHOTO CONTAINER 2 -->
                 <!-- PHOTO CONTAINER 3 -->
                 <div class="photo-container">
-                    <div class="photo">
+                    <div class="photo" onclick="openModal();currentSlide(3)">
                         <img src="./images/thumb/thumbnail_3.jpg" alt="image" />
                         <div class="photo-overlay">
                             <h3 class="white-head">Click to Enlarge</h3>
@@ -72,7 +73,7 @@
                 <!-- END PHOTO CONTAINER 3 -->
                 <!-- PHOTO CONTAINER 4 -->
                 <div class="photo-container">
-                    <div class="photo">
+                    <div class="photo" onclick="openModal();currentSlide(4)">
                         <img src="./images/thumb/thumbnail_4.jpg" alt="image" />
                         <div class="photo-overlay">
                             <h3 class="white-head">Click to Enlarge</h3>
@@ -83,7 +84,7 @@
                 <!-- END PHOTO CONTAINER 4 -->
                 <!-- PHOTO CONTAINER 5 -->
                 <div class="photo-container">
-                    <div class="photo">
+                    <div class="photo" onclick="openModal();currentSlide(5)">
                         <img src="./images/thumb/thumbnail_5.jpg" alt="image" />
                         <div class="photo-overlay">
                             <h3 class="white-head">Click to Enlarge</h3>
@@ -94,7 +95,7 @@
                 <!-- END PHOTO CONTAINER 5 -->
                 <!-- PHOTO CONTAINER 6 -->
                 <div class="photo-container">
-                    <div class="photo">
+                    <div class="photo" onclick="openModal();currentSlide(6)">
                         <img src="./images/thumb/thumbnail_6.jpg" alt="image" />
                         <div class="photo-overlay">
                             <h3 class="white-head">Click to Enlarge</h3>
@@ -105,7 +106,7 @@
                 <!-- END PHOTO CONTAINER 6 -->
                 <!-- PHOTO CONTAINER 7 -->
                 <div class="photo-container">
-                    <div class="photo">
+                    <div class="photo" onclick="openModal();currentSlide(7)">
                         <img src="./images/thumb/thumbnail_7.jpg" alt="image" />
                         <div class="photo-overlay">
                             <h3 class="white-head">Click to Enlarge</h3>
@@ -116,7 +117,7 @@
                 <!-- END PHOTO CONTAINER 7 -->
                 <!-- PHOTO CONTAINER 8 -->
                 <div class="photo-container">
-                    <div class="photo">
+                    <div class="photo" onclick="openModal();currentSlide(8)">
                         <img src="./images/thumb/thumbnail_8.jpg" alt="image" />
                         <div class="photo-overlay">
                             <h3 class="white-head">Click to Enlarge</h3>
@@ -127,7 +128,7 @@
                 <!-- END PHOTO CONTAINER 8 -->
                 <!-- PHOTO CONTAINER 9 -->
                 <div class="photo-container">
-                    <div class="photo">
+                    <div class="photo" onclick="openModal();currentSlide(9)">
                         <img src="./images/thumb/thumbnail_9.jpg" alt="image" />
                         <div class="photo-overlay">
                             <h3 class="white-head">Click to Enlarge</h3>
@@ -141,6 +142,58 @@
         </div>
     </section>
     <!-- END GALLERY -->
+
+    <!-- LIGHTBOX -->
+    <div id="myModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <div class="modal-content">
+
+            <div class="mySlides">
+                <div class="numbertext">1 / 9</div>
+                <img src="./images/Thumb/thumbnail_1.jpg" style="width:100%" />
+            </div>
+            <div class="mySlides">
+                <div class="numbertext">2 / 9</div>
+                <img src="./images/Thumb/thumbnail_2.jpg" style="width:100%" />
+            </div>
+            <div class="mySlides">
+                <div class="numbertext">3 / 9</div>
+                <img src="./images/Thumb/thumbnail_3.jpg" style="width:100%" />
+            </div>
+            <div class="mySlides">
+                <div class="numbertext">4 / 9</div>
+                <img src="./images/Thumb/thumbnail_4.jpg" style="width:100%" />
+            </div>
+            <div class="mySlides">
+                <div class="numbertext">5 / 9</div>
+                <img src="./images/Thumb/thumbnail_5.jpg" style="width:100%" />
+            </div>
+            <div class="mySlides">
+                <div class="numbertext">6 / 9</div>
+                <img src="./images/Thumb/thumbnail_6.jpg" style="width:100%" />
+            </div>
+            <div class="mySlides">
+                <div class="numbertext">7 / 9</div>
+                <img src="./images/Thumb/thumbnail_7.jpg" style="width:100%" />
+            </div>
+            <div class="mySlides">
+                <div class="numbertext">8 / 9</div>
+                <img src="./images/Thumb/thumbnail_8.jpg" style="width:100%" />
+            </div>
+            <div class="mySlides">
+                <div class="numbertext">9 / 9</div>
+                <img src="./images/Thumb/thumbnail_9.jpg" style="width:100%" />
+            </div>
+
+            <!--Next/Prev controls-->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+
+        </div>
+    </div>
+    <!-- END LIGHTBOX -->
+
 
     <!-- Video section I guess??? -->
     <!--
